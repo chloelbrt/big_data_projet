@@ -23,6 +23,9 @@ Voici quelques résultats :
 - Nombre de tâches cron par heure (c'est un moyenne calculée sur les jours de captation des logs)
 ![moyenne_cron_heure](https://github.com/user-attachments/assets/f61a9af1-d44f-4027-b602-3685a1b93ed1)
 
+- On affiche, pour une date donnée et par heure, le nombre de connexion root qu'a ouvert l'utilisateur qui en a ouvert le plus durant l'heure (on précise égalemet l'utilisateur). Dans l'exemple suivant, on a affiché pour le 12 janvier, les utilisateurs qui ont ouvert le plus de connexion root pour chaque heure. Plusieurs utilisateurs peuvent avoir ouvert un même nombre de connexion.
+-  ![rootconnexion12_01](https://github.com/user-attachments/assets/02352548-68b2-4071-985e-e28aafc93860)
+
 ## Difficultés rencontrées
 Plusieurs difficultés ont été rencontrées : 
 - la récupération des données et leur dépôt sur GCP
