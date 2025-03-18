@@ -1,5 +1,5 @@
-# big_data_projet
-### Présentation du dataset
+##### big_data_projet
+## Présentation du dataset
 Nous choisissons d'utiliser des logs d'un supercalculateur Thunderbird récupéré sur Git. Voici un extrait : 
 ![data](https://github.com/user-attachments/assets/c8980e77-52fb-4819-bef9-864d87be12e0)
 Citation : 
@@ -14,5 +14,16 @@ Le but est d'analyer ces logs afin de mettre en évidence certaines caractérist
 Grâce à un script python, on parse les données du fichier texte brut sous la forme : 
 ![data_parsed](https://github.com/user-attachments/assets/a039b6ce-e1db-4b30-9b05-a9b735e79164)
 
-Puis on créé un fichier parquet à partir du fichier texte parsé.
+Puis on crée un fichier parquet à partir du fichier texte parsé (cf: dataconversion.py).
 
+## Analyse des données
+Les analyses sont directement faites sur les fichiers parquets. 
+Les fichiers parquets sont dans un buckets sur GCP et nous utilisons Spark via un notebook pour lancer nos analyses.
+Voici quelques résultats : 
+- Nombre de tâches cron par heure (c'est un moyenne calculée sur les jours de captation des logs)
+![moyenne_cron_heure](https://github.com/user-attachments/assets/f61a9af1-d44f-4027-b602-3685a1b93ed1)
+
+## Difficultés rencontrées
+Plusieurs difficultés ont été rencontrées : 
+- la récupération des données et leur dépôt sur GCP
+- les gestions des sessions Spark
