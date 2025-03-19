@@ -7,7 +7,7 @@ import subprocess
 import re
 from pathlib import Path
 
-# Initialize Spark session
+# Initialisation de la session Spark
 spark = SparkSession.builder \
     .appName('Cron Activity Analysis Updated') \
     .config("spark.sql.files.maxPartitionBytes", "128MB") \
@@ -25,7 +25,7 @@ def parse_log_line(log_line):
     if not match:
         return None, None, None, None, None, None, None, None, None, None, None
     
-    # Extraction des groupes pertinents (en ignorant les espaces)
+    # Extraction des groupes pertinents
     label = match.group(1)             # -
     timestamp = match.group(3)         # 1131566461
     date = match.group(5)              # 2005.11.09
@@ -101,7 +101,7 @@ def convert_logs_to_parquet_with_spark(log_file_path, output_parquet_path):
     
     # Vérifier si le dataframe est vide
     if parsed_df.count() == 0:
-        print("Attention: Aucune donnée valide n'a été trouvée après le parsing!")
+        print("Aucune donnée valide n'a été trouvée après le parsing!")
         return
     
     try:
@@ -118,7 +118,6 @@ def convert_logs_to_parquet_with_spark(log_file_path, output_parquet_path):
         print(f"Erreur lors de l'écriture du fichier parquet: {e}")
 
 
-# Exemple d'utilisation
 log_file_path = "./Thunderbird.log"
 output_path = "./Thunderbird_parsed/"
 
