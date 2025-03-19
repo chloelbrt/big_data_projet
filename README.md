@@ -25,6 +25,14 @@ Voici quelques résultats :
 - On affiche, pour une date donnée et par heure, le nombre de connexion root qu'a ouvert l'utilisateur qui en a ouvert le plus durant l'heure (on précise égalemet l'utilisateur). Dans l'exemple suivant, on a affiché pour le 12 janvier, les utilisateurs qui ont ouvert le plus de connexion root pour chaque heure. Plusieurs utilisateurs peuvent avoir ouvert un même nombre de connexion.
 -  ![rootconnexion12_01](https://github.com/user-attachments/assets/02352548-68b2-4071-985e-e28aafc93860)
 
+![moyenne log heure](https://github.com/user-attachments/assets/53e102f7-171c-4a3f-bae8-73c8ed9ffd89)
+![Composant echec](https://github.com/user-attachments/assets/bf2af5f9-9bb4-48d1-abb1-80a15811ae72)
+![Noisy node](https://github.com/user-attachments/assets/8776906b-5bd6-4954-aae3-9d57396de89c)
+![Root time session](https://github.com/user-attachments/assets/52d502a6-d6a9-48ef-a15d-aa16d8e0a5c4)
+
+
+
+
 # Difficultés rencontrées
 Plusieurs difficultés ont été rencontrées : 
 - la récupération des données et leur dépôt sur GCP
